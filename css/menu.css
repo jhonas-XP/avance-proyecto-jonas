@@ -1,185 +1,97 @@
-header
-{ 
-    width: 100%;       
-    background: #000000;
-    color: #fff;
-    position: fixed;
-    z-index: 5;
+*
+{
+    box-sizing: border-box;
 }
-header label
-{  
-    margin: 6%;     
+body
+{
+    margin: 0;
+}
+.nav-bar
+{
+    background: #000;
+    padding: 20px;
+    display: block;
+    color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 1.5em;
+    width: 100%;
 }
-.menu a
-{    
-    width: 1%;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    left: 1%;
-    font-size: 19px;    
-}
-.menu ul
-{     
-    margin:30px ;
-    color: black;
-    display: flex;
-    list-style: none;    
-}
-.menu ul ul
+.menu, .submenu
 {
-    padding: 10px;
-    display: none;
-    background:rgb(255, 255, 255);       
-    border-radius: 3px;
-    border: 3px solid #000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.nav_menu li a  
+.menu
 {
-    flex-direction:row;      
-    width: 20px;
+    background: #555;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
 }
-.nav_cont
+.menu__link
 {
-    display: flex;
-    height: 100%;
-    width: 90%;
-    justify-content: space-between;    
-}
-.menu li
-{   
-    text-decoration: none;
     display: block;
-    padding: 10px 25px 10px 25px;
-    border-radius: 3px ; 
-    justify-content: space-between;
-    align-items: center;        
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
 }
-/*esta funcion controla los margenes que hay en las opciones dentro del sub menu*/
-.sub li
-{    
-    padding: 13px 12px 10px 1%;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 3px ;
-}
-/*controla el color cuando se posiciona el mouse */
-.menu  li:hover
-{      
-    background: #12C6BB;       
-}
-.sub a
+.submenu
 {
-    color: rgb(0, 0, 0);
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
 }
-/*con esta funcion se controla la posicion del logo*/
-.nav_logo img
+.submenu .menu__link
 {
-    width: 200px;
-    margin:24px;
-    max-width: 1000px;    
+    background: #333;
+    padding-left:50px ;
 }
-/*esta funcion controla la posicion del cuadro sub menu*/
-.menu ul li:hover ul
+.mostrar
 {
-    top: 56px;
-    margin-left: -27px;
-    display: block;
-    position: absolute;   
-}
-.nav_cont
-{
-    display: flex;
-    height: 100%;
-    width: 90%;
-    font-size: 14px;    
-    align-items: center;
-}
-label, .nav_input
-{   
-    display: none;
+    margin-left: 0;
 }
 
 
-@media (max-width:1180px )
-{ 
-    header
-    {         
-        width: 100vw 50px 20px 2px;        
-        color: #12C6BB;
-        position: fixed;        
-    }
-    header label
+
+@media(min-width:1024px)
+{
+    .nav-bar
     {
-        display: inline-block;        
-    }      
-    .nav_menu
-    {        
-        position: fixed;        
-        bottom:-10000% ;
-        background: rgb(255, 255, 255);
-        width: 100%;
+        display: none;
+    }
+    .menu
+    {
+        margin-left: 0;
         display: flex;
-        z-index: 2;       
-        flex-direction: column;
-        display: block;
-        align-items: center;
-        clip-path: circle(0 at center);
-        transition: clip-path 1s ease-in-out;
     }
-    /*con esta funcion se ajusta el espacio que va a tener cada recuadro de opcion*/
-    .menu ul li  
-    {   
-        bottom: 100%;
-        display: block;  
-        background: #00000067;
-        text-align: center;
-        flex-direction: row;
-        padding: 2% 5%;
-        border: 1px solid rgb(0, 0, 0);
-        border-radius: 3px ;
-        margin: 26px;
-    }
-    /*esta funcion controla la posicion del menu desplegable y los bordes*/
-    .menu ul
-    {   
-        position:absolute;
-        top:100%;
-        left: -2.7%;
-        padding: 30%;  
-        margin: 0;        
-    }
-    
-    /*Con esta funcion se controla el color de las letras*/
-    .menu li a
-    {      
-        bottom: 100%;   
-        margin: 20px;         
-        color: rgb(0, 0, 0);       
-    }        
-    .menu ul li:hover ul 
-    {            
-        display: contents;
-        position: absolute;        
-    }    
-
-    /*esta funcion controla los colores que hay dentro del sub menu al posicionarse el cursor del mouse*/
-    .menu ul li:hover
-    {                    
-        background: #12C6BB;       
-    }
-
-    .nav_input:checked + .nav_menu 
-    {               
-        clip-path: circle(100% at center);
-    }
-           
-    .nav_logo img
+    .container-submenu
     {
         position: relative;
-        top: 1px;        
-        margin: 3px 15px;
-        max-width: 1000px;
-        
-    }    
+    }
+    .menu__link:hover
+    {
+        background: #444;
+    }
+    .submenu .menu__link:hover
+    {
+        background: #444;
+    }
+    .submenu
+    {
+        position: absolute;
+        top:60px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;        
+    }
+    .container-submenu:hover .submenu
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
 }

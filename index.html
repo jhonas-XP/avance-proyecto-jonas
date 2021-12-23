@@ -5,247 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontello.css">    
-    <link rel="stylesheet" href="js/menu.js">
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="shortcut icon" href="image/icon/favicon.png" type="image/x-icon">   
+    <link rel="stylesheet" href="css/style.css">     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">   
+    <link rel="stylesheet" href="css/menu.css"> 
     <title>Proyecto Final | Diseño Web I</title>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <nav class="menu">
-                <div class="nav_cont">                    
-                    <a class="nav_logo" href="#"><img src="image/logo/logotipo.png" alt=""></a>                    
-                    <label for="btn_menu" class="nav_label">                
-                        <i class="icon-menu"></i>                 
-                    </label>
-                    <input type="checkbox" id="btn_menu" class="nav_input">
-                    <ul class="nav_menu" >                        
-                        <li><a class="nav_item" href="#" rel="noopener noreferrer">Inicio</a></li>
-                        <li><a class="nav_item" href="#" rel="noopener noreferrer">Secciones <span class="icon-angle-down"></span></a>
-                            <ul class="sub">
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Animales encontrador en los últimos años</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Animales en peligro de extinción</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Animales más comunes</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Fauna marina</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Migración de especies en Bolivia</a></li>
-                            </ul>
-                        </li>
-                        <li><a  class="nav_item" href="#" rel="noopener noreferrer">Especies<span class="icon-angle-down"></span></a>
-                             <ul class="sub">
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Aves</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Felinos</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Camelidos</a></li>
-                                <li><a class="nav_item" href="#" target="_blank" rel="noopener noreferrer">Roedores</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="nav_item" href="#about" rel="noopener noreferrer">Acerca de nosotros</a></li>
-                        <li><a class="nav_item"  href="#contact" rel="noopener noreferrer">Contactanos</a></li>
-                    </ul>    
-                </div>
+            <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>Menu</span>
+            <nav class="main-nav">                  
+                <ul class="menu" id="menu" >                        
+                    <li class="menu__item"><a href="#" rel="noopener noreferrer" class="menu__link">Inicio</a></li>
+                    <li class="menu__item container-submenu">
+                        <a href="#" rel="noopener noreferrer" class="menu__link submenu-btn">Secciones <i class="fas fa-sort-down"></i></a>
+                        <ul class="submenu">
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Animales encontrador en los últimos años</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Animales en peligro de extinción</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Animales más comunes</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Fauna marina</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Migración de especies en Bolivia</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item container-submenu">                        
+                        <a href="#" rel="noopener noreferrer" class="menu__link submenu-btn">Especies <i class="fas fa-sort-down"></i></a>
+                        <ul class="submenu">
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Aves</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Felinos</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Camelidos</a></li>
+                            <li class="menu__item"><a href="#" target="_blank" rel="noopener noreferrer" class="menu__link">Roedores</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__item"><a href="#about" rel="noopener noreferrer" class="menu__link">Acerca de nosotros</a></li>
+                    <li class="menu__item"><a href="#contact" rel="noopener noreferrer" class="menu__link">Contactanos</a></li>
+                </ul>                    
             </nav>
+            <script src="js/menu.js"></script>
         </header>
-        <script src="js/menu.js"></script>
-        <main>
-             <!--Primer slide-->
-            <!--contenedor padre-->
-            <div class="slideshow">
-                <!--asignacion de elementos en la clase item-->
-                <div class="slideshow-item">
-                    <img src="image/slide1/Cochabamba.jpg" alt="imagen de la ciudad de Cochabamba en Bolivia">
-                    <!--elemento de texto-->
-                    <div class="slideshow-item-text">
-                        <!--enlace-->
-                        <!--<h5><a href="https://www.youtube.com/watch?v=LcmMSzFZqVM">Cochabamba, Bolivia</a></h5>-->
-                        <h5>Cochabamba, Bolivia</h5>
-                        <p>Ciudad de magico encanto que deleita a quien la visita con su amplia variedad gastronomica, con su pasado historico y cultural, la llajta encanta con sus rincones pintorescos y su pasado colonial. </p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/LaPaz.jpg" alt="imagen de la ciudad de La Paz en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>La Paz, Bolivia</h5>
-                        <p>Bolivia y los colores de La Paz (Nuestra Señora de La Paz) El aniversario de fundación de una famosa ciudad latinoamericana cuyo nombre está cargado de simbolismo.
-                        </p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/Potosi.jpg" alt="imagen de la ciudad de Potosí en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Potosi, Bolivia</h5>
-                        <p>Cerro Rico de Potosi - Minas de plata de Potosí Una de las principales atracciones turísticas de la ciudad que una vez fue conocida como la ciudad más rica y poblada del mundo.
-                        </p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/Oruro.jpg" alt="imagen de la ciudad de Oruro en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Oruro, Bolivia</h5>
-                        <p>El Carnaval de Oruro se celebra como un signo de devoción a la Virgen de Socavon. El Carnaval de Oruro es uno de los mayores eventos culturales y festividades en Bolivia y América Latina.</p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/Beni.jpg" alt="imagen de la ciudad de Beni en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Beni, Bolivia</h5>
-                        <p>El río Beni es un destacado río boliviano de la cuenca amazónica, el segundo en importancia fluvial. Tras recoger las aguas de numerosos afluentes, al unirse con el río Mamoré da lugar al nacimiento del importante río Madeira.</p>
-                    </div>
-                </div>
-
-                <div class="slideshow-item">
-                    <img src="image/slide1/Pando.jpg" alt="imagen de la ciudad de Pando en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Pando, Bolivia</h5>
-                        <p>El Departamento de Pando, brinda una aventura única, por sus áridos caminos o sus incursiones a través de sus ríos, con lugares paradisiacos, donde la aventura no puede estar ausente y se la puede encontrar en cada rincón de este
-                            joven departamento que tiene una gran variedad de fauna y flora.</p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/SantaCruz.jpg" alt="imagen de la ciudad de Santa Cruz en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Santa Cruz, Bolivia</h5>
-                        <p>Santa Cruz de la Sierra, es el centro comercial de Bolivia, actualmente está considerada como centro económico del país, destacando la industria agropecuaria, forestal, minera y de hidrocarburos. El Departamento de Santa Cruz,
-                            es uno de los que más aporta al PBI del país.</p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/Sucre.jpg" alt="imagen de la ciudad de Sucre en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Sucre, Bolivia</h5>
-                        <p>Ciudad histórica cultural La gran riqueza en biodiversidad y la presencia de diferentes culturas en las cuatro regiones de Chuquisaca, sumados a la riqueza arquitectónica colonial existente en la ciudad.</p>
-                    </div>
-                </div>
-                <div class="slideshow-item">
-                    <img src="image/slide1/Tarija.jpg" alt="imagen de la ciudad de Tarija en Bolivia">
-                    <div class="slideshow-item-text">
-                        <h5>Tarija, Bolivia</h5>
-                        <p>La producción del departamento de Tarija se basa en la agricultura, la pesca, la ganadería y la minería.Los grupos étnicos que habitan en este departamento son: guaraníes, tapietes, tobas, matacos, chulupis, caicuris y chiriguanos.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="title">
-                <h1>Fauna de Bolivia</h1>
-            </div>
-            <div class="species" id="species">
-                <div class="animal">
-                    <div class="image">
-                        <img src="image/image_content/puma.jpg" alt="">
-                    </div>
-                    <h2 class="title1">Puma o León de Montaña</h2>
-                    <p>Es un felino que vive a lo largo de todo el continente americano. En Sudamérica habita principalmente en las proximidades de la Cordillera de los Andes. Es uno de los mayores felinos del mundo y vive en zonas de densa vegetación, donde
-                        acecha escondido a sus presas. Las principales amenazas del puma o león de montaña son la caza comercial o deportiva y la destrucción de sus hábitats.</p>
-                </div>
-                <div class="animal animal2">
-                    <div class="image">
-                        <img src="image/image_content/paraba_frente_roja.png" alt="">
-                    </div>
-                    <h2 class="title1">Paraba Frente Roja</h2>
-                    <p>Su captura, transporte y exportación está prohibida por la ley boliviana. Sin embargo, es capturado por cazadores de aves vivas para el comercio ilegal y es perseguido en forma intensiva por los granjeros que la consideran una plaga
-                        para sus cultivos de maíz y maní. En Peligro Crítico (MMAyA, 2009); y en Peligro (IUCN, 2016)</p>
-                </div>
-                <div class="animal animal3">
-                    <div class="image">
-                        <img src="image/image_content/condor-oficial.jpg" alt="">
-                    </div>
-                    <h2 class="title1">Cóndor Andino</h2>
-                    <p>Las causas que han afectado históricamente su población en algunos países vecinos tienen que ver con la expansión de la frontera agrícola hacia bosques alto andinos y páramos, la desaparición de grandes mamíferos silvestres los cuales
-                        al morir eran su alimento, e indudablemente la persecución directa o la caza furtiva. Vulnerable (MMAyA, 2009); Casi Amenazado (IUCN, 2016)</p>
-                </div>
-                <div class="animal">
-                    <div class="image">
-                        <img src="image/image_content/jucumari.png" alt="">
-                    </div>
-                    <h2 class="title1">Jucumari</h2>
-                    <p>Su situación es vulnerable por su sensibilidad a efectos de la destrucción de su hábitat, construcción de caminos, agricultura, explotación petrolera y la caza indiscriminada. Vulnerable (MMAyA, 2009 y IUCN, 2008)</p>
-                </div>
-                <div class="animal animal2">
-                    <div class="image">
-                        <img src="image/image_content/quirquincho.png" alt="">
-                    </div>
-                    <h2 class="title1">Quirquincho</h2>
-                    <p>La mayor amenaza sobre las poblaciones de esta especie, tanto a nivel local como nacional, es la caza intensiva con fines tradicionales (construcciones de matracas, charangos, amuletos, recuerdos) que se incrementa en los meses de octubre y febrero.</p>
-                </div>
-                <div class="animal animal3">
-                    <div class="image">
-                        <img src="image/image_content/guanaco.png" alt="">
-                    </div>
-                    <h2 class="title1">Guanaco</h2>
-                    <p>Las razones por la que se reduce el número de ejemplares de guanaco, están el cambio climático y la invasión que el hombre hace a sus territorios con actividades agropecuarias. En peligro Crítico (MMAyA, 2009); Preocupación Menor (UICN 2016)</p>
-                </div>
-            </div>
-            <div class="parallax"></div>
-            <div class="section" id="section">
-                <h1 class="title">Animales en Extinsión</h1>
-                <!--Segundo slide-->
-                <!--<h2>Aquí habra un Slide</h2>-->
-                <!--contenedor padre-->
-                <div class="slideshoww">
-                    <!--asignacion de elementos en la clase item-->
-                    <div class="slideshow-itemm">
-                        <img src="image/slide2/animal1.jpg" alt="imagen del animal Tití emperador">
-                        <!--elemento de texto-->
-                        <div class="slideshow-item-textt">
-                            <h5>Tití emperador (Saguinus imperator)</h5>
-                            <p>Hoy en día, esta especie de tití se encuentra amenazada por la deforestación de su hábitat y la utilización de sus tierras para actividades mineras y agrícolas.Se trata de una especie de mono que vive en las copas de los árboles
-                                tanto en bosques secos como lluviosos.</p>
-                        </div>
-                    </div>
-                    <div class="slideshow-itemm">
-                        <img src="image/slide2/animal2.jpg" alt="imagen del animal Delfín boliviano">
-                        <div class="slideshow-item-textt">
-                            <h5>Delfín boliviano (Inia boliviensis)</h5>
-                            <p>Las principales amenazas que sufre el delfín boliviano son la contaminación de los ríos y la destrucción de sus hábitats para construir presas.Es el único cetáceo típico de Bolivia y que vive en los ríos de la región amazónica
-                                boliviana. Es una especie solitaria, excepto en época reproductiva.</p>
-                        </div>
-                    </div>
-                    <div class="slideshow-itemm">
-                        <img src="image/slide2/animal3.jpg" alt="imagen del animal Cóndor andino">
-                        <div class="slideshow-item-textt">
-                            <h5>Cóndor andino (Vultur gryphus)</h5>
-                            <p>Las mayores amenazas que provocan que el estado de población del cóndor andino sea alarmante son la destrucción del hábitat, los propios habitantes de las regiones en las que viven, pues disputan por el terreno y el ganado,
-                                y los cazadores.Esta es un ave carroñera y es una de las de mayor tamaño.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="parallax1"></div>
-            <div class="about" id="about">
-                <h1 class="title">Acerca de nosotros</h1>
-                <div class="mision">
-                    <h2>Misión</h2>
-                    <p>La misión de la pagina es informar a todo tipo de público, ya que, el tocar un tema como La Fauna en Bolivia, es (o debería) ser un tema de interés público. Tanto niños, adolescentes y jóvenes, podrán apoyarse en la página al momento
-                        de realizar un trabajo de investigación que necesite información del tema y; las personas adultas podrán navegar por la web con el objetivo de informarse y seguir aprendiendo acerca de la diversidad que hay en el país.</p>
-                </div>
-                <div class="vision">
-                    <h2>Visión</h2>
-                    <p>La visión del proyecto es diseñar una página enfocada en la diversidad de Fauna en Bolivia. Dar a conocer al público objetivo las diferentes especies que hay en el país y puedan enriquecerse con conocimiento acerca de las diferencias
-                        que hay entre especies, su forma de vivir y sobrevivir. Entre tantas especies también se quiere dar a conocer a los diferentes animales que se encuentran en peligro de extinción, de este modo concientizar acerca de la importancia
-                        que tiene el cuidado de estos.</p>
-                </div>
-            </div>
-            <div class="parallax"></div>
-            <div class="contact" id="contact">
-                <div class="address">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.73958038631!2d-66.18654008575689!3d-17.376259788085214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3756695b6ca7b%3A0xdcfd28c66156e3ed!2sUPDS%20Postgrado%20-%20Sede%20Cochabamba!5e0!3m2!1ses!2sbo!4v1639356543080!5m2!1ses!2sbo" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div class="facebook">
-                    <div class="red-social">
-                        <div class="cuenta jonas"><a href="#" target="_blank"><img src="image/icon/facebook.png" alt="Puede seguirnos en muestras redes sociales">Jonas Alanez Arrasola</a></div>
-                        <div class="cuenta kevin"><a href="#" target="_blank"><img src="image/icon/facebook.png" alt="Puede seguirnos en muestras redes sociales">Kevin Jhonatan M. Mollo</a></div>
-                        <div class="cuenta mishel"><a href="#" target="_blank"><img src="image/icon/facebook.png" alt="Puede seguirnos en muestras redes sociales">Brisa Mishel P. Escobar</a></div>
-                    </div>
-                    <div class="formulario"></div>
-                </div>
-            </div>  
-        </main>
-        <footer>
-            <p>Derechos de autor | 2021</p>
-        </footer>
-    </div>
 </body>
-
 </html>
+        
