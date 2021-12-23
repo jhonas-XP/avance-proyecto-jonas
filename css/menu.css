@@ -8,8 +8,7 @@ body
 }
 /*Propiedades del icono de menu*/
 .nav-bar
-{ 
-    position: fixed;  
+{    
     background: rgb(0, 0, 0);
     padding: 50px;
     display: block;
@@ -124,14 +123,7 @@ body
     {
         position: relative;
     }
-    .nav_logo
-    {
-        position: absolute;
-    top: 0px;
-    left: 0px;
-    background: rgb(0, 0, 0);
-    padding: 0px ;      
-}
+    
     .menu__link:hover
     {
         background: #444;
