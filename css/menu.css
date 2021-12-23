@@ -8,20 +8,19 @@ body
 }
 /*Propiedades del icono de menu*/
 .nav-bar
-{
-    position: absolute;
-    top: 15px;
-    left: 860px;
-    background: rgba(0, 0, 0, 0);
-    padding: 20px;
+{ 
+    position: fixed;  
+    background: rgb(0, 0, 0);
+    padding: 50px;
     display: block;
     color: white;
     cursor: pointer;
-    font-size: 6em;
+    font-size: 1.5em;
     width: 100%;
+    text-align: right;
 }
 .menu, .submenu
-{
+{    
     list-style: none;
     padding: 0;
     margin: 0;
@@ -36,16 +35,20 @@ body
 }
 .nav_logo
 {
+    position: relative;
+    top: 0px;
+    left: 0px;
     background: rgb(0, 0, 0);
-        
+    padding: 0px ;      
 }
 .menu__link
 {
     display: block;
-    padding: 20px;
+    padding: 22px;
     color: white;
     font-size: 1.2em;
     text-decoration: none;
+    
 }
 .submenu
 {
@@ -80,7 +83,7 @@ body
     {
         position: relative;
     }
-    
+   
     .menu__link:hover
     {
         background: #444;
@@ -121,7 +124,14 @@ body
     {
         position: relative;
     }
-    
+    .nav_logo
+    {
+        position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgb(0, 0, 0);
+    padding: 0px ;      
+}
     .menu__link:hover
     {
         background: #444;
