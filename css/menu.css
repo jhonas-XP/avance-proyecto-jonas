@@ -6,14 +6,18 @@ body
 {
     margin: 0;
 }
+/*Propiedades del icono de menu*/
 .nav-bar
 {
-    background: #000;
+    position: absolute;
+    top: 15px;
+    left: 860px;
+    background: rgba(0, 0, 0, 0);
     padding: 20px;
     display: block;
     color: white;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 6em;
     width: 100%;
 }
 .menu, .submenu
@@ -24,10 +28,16 @@ body
 }
 .menu
 {
-    background: #555;
+    background: rgb(0, 0, 0);
     width: 100%;
     margin-left: -100%;
     transition: all 0.5s;
+    
+}
+.nav_logo
+{
+    background: rgb(0, 0, 0);
+        
 }
 .menu__link
 {
@@ -70,6 +80,48 @@ body
     {
         position: relative;
     }
+    
+    .menu__link:hover
+    {
+        background: #444;
+    }
+    .submenu .menu__link:hover
+    {
+        background: #444;
+    }
+    .submenu
+    {
+        position: absolute;
+        top:60px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;        
+    }
+    .container-submenu:hover .submenu
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+@media(max-width:104px)
+{
+    .nav-bar
+    {
+        display: none;
+    }
+    .menu
+    {
+        margin-left: 0;
+        display: flex;
+    }
+    .container-submenu
+    {
+        position: relative;
+    }
+    
     .menu__link:hover
     {
         background: #444;
