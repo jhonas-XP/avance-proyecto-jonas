@@ -1,0 +1,153 @@
+html {
+    font-size: 8px;
+}
+body {
+    background-color: azure;
+}
+
+.slideshoww {
+    /*padding-top: 80px;*/
+    width: 104%;
+    height: 500px;
+    position: absolute;    
+    overflow: hidden;
+}
+
+.slideshow-itemm {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 31s infinite;
+}
+
+.slideshow-itemm img {
+    width: 100%;
+    height: 100%;
+    /*object-fit: cover;*/
+    /*animation: zoom 31s infinite;*/
+    bottom: 100px;
+    background-size: cover;
+}
+
+/*nth-child coincide con uno o más elementos en función de su posición entre un grupo de hermanos.*/
+
+.slideshow-itemm:nth-child(1),
+.slideshow-itemm:nth-child(1) img {
+    animation-delay: 0s;
+}
+
+.slideshow-itemm:nth-child(2),
+.slideshow-itemm:nth-child(2) img {
+    animation-delay: 10s;
+}
+
+.slideshow-itemm:nth-child(3),
+.slideshow-itemm:nth-child(3) img {
+    animation-delay: 20s;
+}
+
+.slideshow-item-textt {
+    max-width: 50%;
+    position: absolute;
+    top: 78%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.164);
+    color: #fff;
+    padding: 1rem 10rem;
+}
+
+.slideshow-item-textt h5 {
+    font-size: 3rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: .5rem;
+}
+
+.slideshow-item-textt p {
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/*fotograma describe cómo se muestra cada elemento animado en un momento dado durante la secuencia de la animación.*/
+
+@keyframes cycleImages {
+    25% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+/*@keyframes zoom {
+    100% {
+        transform: scale(1.3);
+    }
+}*/
+
+@media screen and (max-width: 1000px) {
+    .slideshow-item-textt {
+        max-width: 70%;
+        padding: 5rem 1rem;
+        top: 70%;
+        bottom: 0;
+        transform: initial;
+    }
+    .slideshow-item-textt h5 {
+        font-size: 3rem;
+    }    
+    .slideshow-item-textt p {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slideshow-item-textt {
+        max-width: 100%;
+        padding: 2rem;
+        top: 70%;
+        bottom: 0;
+        transform: initial;
+    }
+    .slideshow-item-textt h5 {
+        font-size: 3rem;
+    }
+    .slideshow-item-textt p {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 495px) {
+    .slideshow-item-textt {
+        max-width: 100%;
+        padding: 2rem;
+        top: 65%;
+        bottom: 0;
+        transform: initial;
+    }
+    .slideshow-item-textt h5 {
+        font-size: 1rem;
+    }
+    .slideshow-item-textt p {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 340px) {
+    .slideshow-item-textt {
+        max-width: 100%;
+        padding: 2rem;
+        top: 55%;
+        bottom: 0;
+        transform: initial;
+    }
+    .slideshow-item-textt h5 {
+        font-size: 2rem;
+    }
+    .slideshow-item-textt p {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,199 @@
+/* ============================================================== */
+/* _________Contenido donde se muestra las 6 especies____________ */
+/* ============================================================== */
+main h1
+{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 50px;
+}
+.title
+{
+  margin-top: 0px;
+  text-align: center;
+  font-size: 50px;
+}
+.species {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin:  auto;
+  -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+  padding: 20px 0px 20px 0px;
+}
+
+.species .animal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc((100% - 60px) /  3);
+  -webkit-animation-name: border;
+          animation-name: border;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  position: relative;
+}
+
+.species .animal .image img {
+  max-width: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  display: inherit;
+  width: 97.6%;
+  position: relative;
+  top: -4px;
+  margin: 4px auto;
+}
+
+.species .animal .image img:hover {
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.species .animal p {
+  width: -webkit-fill-available;
+  font-size: 22px;
+  padding: -123px 2px;
+  text-align: justify;
+  margin: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.species .animal:hover {
+  background: red;
+}
+
+@-webkit-keyframes border {
+  25% {
+    background-color: red;
+    bottom: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: yellow;
+    bottom: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    bottom: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes border {
+  25% {
+    background-color: red;
+    bottom: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: yellow;
+    bottom: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    bottom: 0px;
+    top: 0px;
+  }
+}
+
+.species .animal2:hover {
+  background: yellow;
+}
+
+.species .animal3:hover {
+  background: green;
+}
+
+@media screen and (min-width: 768px) {
+  .species .animal .image img {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .title1 {
+    font-size: 45px;
+    padding: 5px 0 0 0;
+  }
+  .species .animal p {
+    font-size: 39px;
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .title1 {
+    font-size: 54px;
+  }
+  .species .animal p {
+    font-size: 54px;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  .title1 {
+    font-size: 74px;
+    padding: 32px 0 0 0;
+  }
+  .species .animal .image img {
+    height: 1000px;
+  }
+  .species .animal p {
+    font-size: 74px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .species {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .species .animal {
+    width: 100%;
+  }
+  .species .animal .image {
+    margin: auto;
+    z-index: 1;
+  }
+  .species .animal .image img {
+    margin: 8px auto;
+  }
+  .species .animal p {
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+/* ============================================================== */
+/* _________Contenido donde se muestra las 6 especies____________ */
+/* ============================================================== */

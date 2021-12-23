@@ -1,0 +1,386 @@
+.species {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+  padding: 20px 0 20px 0px;
+}
+
+.species .animal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc((100% - 60px) /  3);
+  -webkit-animation-name: border;
+          animation-name: border;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  position: relative;
+}
+
+.species .animal .image img {
+  max-width: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  display: inherit;
+  width: 97.6%;
+  position: relative;
+  top: -4px;
+  margin: 4px auto;
+}
+
+.species .animal .image img:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.species .animal p {
+  width: -webkit-fill-available;
+  font-size: 22px;
+  padding: 3px 2px;
+  text-align: justify;
+  margin: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.species .animal:hover {
+  background: red;
+}
+
+@-webkit-keyframes border {
+  25% {
+    background-color: red;
+    bottom: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: yellow;
+    bottom: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    bottom: 0px;
+    top: 0px;
+  }
+}
+
+@keyframes border {
+  25% {
+    background-color: red;
+    bottom: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: yellow;
+    bottom: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    bottom: 0px;
+    top: 0px;
+  }
+}
+
+.species .animal2:hover {
+  background: yellow;
+}
+
+.species .animal3:hover {
+  background: green;
+}
+
+@media screen and (min-width: 768px) {
+  .species .animal .image img {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .title {
+    font-size: 45px;
+    padding: 5px 0 0 0;
+  }
+  .species .animal p {
+    font-size: 39px;
+    padding: 25px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .title {
+    font-size: 54px;
+  }
+  .species .animal p {
+    font-size: 54px;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  .title {
+    font-size: 74px;
+    padding: 32px 0 0 0;
+  }
+  .species .animal p {
+    font-size: 74px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .species {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .species .animal {
+    width: 100%;
+  }
+  .species .animal .image {
+    margin: auto;
+    z-index: 1;
+  }
+  .species .animal .image img {
+    margin: 8px auto;
+  }
+  .species .animal p {
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 0 5px 0px;
+  background: #00F260;
+  background: -webkit-gradient(linear, left top, right top, from(#0575E6), to(#00F260));
+  background: linear-gradient(to right, #0575E6, #00F260);
+}
+
+.contact .address {
+  width: 49.2%;
+}
+
+.contact .address .map {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+}
+
+.contact .facebook {
+  width: 50%;
+  height: 530px;
+  max-height: 700px;
+}
+
+.contact .facebook .red-social {
+  height: 48%;
+}
+
+.contact .facebook .red-social .jonas {
+  text-align: center;
+}
+
+.contact .facebook .red-social .jonas img {
+  position: relative;
+  right: 12%;
+  top: 30px;
+}
+
+.contact .facebook .red-social .jonas a {
+  position: relative;
+  left: 7%;
+  bottom: 20px;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contact .facebook .red-social .jonas a:hover {
+  color: red;
+}
+
+.contact .facebook .red-social .kevin {
+  text-align: center;
+}
+
+.contact .facebook .red-social .kevin img {
+  position: relative;
+  right: 12%;
+  top: 30px;
+}
+
+.contact .facebook .red-social .kevin a {
+  position: relative;
+  left: 10%;
+  bottom: 38px;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contact .facebook .red-social .kevin a:hover {
+  color: yellow;
+}
+
+.contact .facebook .red-social .mishel {
+  text-align: center;
+}
+
+.contact .facebook .red-social .mishel img {
+  position: relative;
+  right: 13%;
+  top: 30px;
+}
+
+.contact .facebook .red-social .mishel a {
+  position: relative;
+  left: 9%;
+  bottom: 40px;
+  text-decoration: none;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contact .facebook .red-social .mishel a:hover {
+  color: green;
+}
+
+.contact .facebook .formulario {
+  height: 48%;
+  background-color: #e5e5f7;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 5px 10px -5px #000;
+          box-shadow: 0 5px 10px -5px #000;
+  max-height: 400px;
+  position: relative;
+  top: 15px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) and (min-width: 926px) {
+  .contact .facebook .formulario {
+    margin: 100px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    padding: 0px;
+  }
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .address {
+    width: 98.5%;
+  }
+  .contact .facebook {
+    width: 100%;
+  }
+  .contact .facebook .red-social .jonas {
+    text-align: center;
+  }
+  .contact .facebook .red-social .jonas img {
+    position: relative;
+    right: 12%;
+    top: 20px;
+  }
+  .contact .facebook .red-social .jonas a {
+    position: relative;
+    left: 7%;
+    bottom: 27px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  .contact .facebook .red-social .jonas a:hover {
+    color: red;
+  }
+  .contact .facebook .red-social .kevin {
+    text-align: center;
+  }
+  .contact .facebook .red-social .kevin img {
+    position: relative;
+    right: 12%;
+    top: 30px;
+  }
+  .contact .facebook .red-social .kevin a {
+    position: relative;
+    left: 10%;
+    bottom: 45px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  .contact .facebook .red-social .kevin a:hover {
+    color: yellow;
+  }
+  .contact .facebook .red-social .mishel {
+    text-align: center;
+  }
+  .contact .facebook .red-social .mishel img {
+    position: relative;
+    right: 12%;
+    top: 30px;
+  }
+  .contact .facebook .red-social .mishel a {
+    position: relative;
+    left: 9%;
+    bottom: 52px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+  }
+  .contact .facebook .red-social .mishel a:hover {
+    color: green;
+  }
+  .contact .facebook .formulario {
+    top: 40px;
+    width: 98%;
+  }
+}
